@@ -15,26 +15,26 @@ const increaseLevel = {
   attack: 18,
   defence: 60,
   health: 100,
-  level: 2
+  level: 2,
 };
 
 test('levelUp increases parameters', () => {
   const boostLevel = new Character(15, 50);
   boostLevel.levelUp();
-  expect(boostLevel).toEqual(increaseLevel)
+  expect(boostLevel).toEqual(increaseLevel);
 });
 
 const takingDamage = {
   attack: 15,
   defence: 50,
   health: 97,
-  level: 1
+  level: 1,
 };
 
 test('taking damage', () => {
   const boostLevel = new Character(15, 50);
   boostLevel.damage(6);
-  expect(boostLevel).toEqual(takingDamage)
+  expect(boostLevel).toEqual(takingDamage);
 });
 
 test('character without HP', () => {
